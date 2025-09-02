@@ -3,9 +3,7 @@ import "./dashboard.css";
 
 
 
-/**
- * Map many possible user words to our 4 moods.
- */
+
 function mapInputToMood(text) {
   const t = (text || "").toLowerCase().trim();
 
@@ -40,11 +38,7 @@ const buckets = {
   return "stressed";
 }
 
-/**
- * Our data: emoji, quotes, and curated song links for each mood & language.
- * (Links open in a new tab)
- */
-// Mood data with emoji, quotes, and music links
+
 const MOOD_DATA = {
   happy: {
     emoji: "😊",
@@ -177,13 +171,13 @@ export default function Dashboard() {
 
   return (
     <div className="dash-wrap">
-      {/* Optional background music */}
+     
       <audio src="YOUR_MUSIC_URL_HERE.mp3" autoPlay loop />
 
       <div className="card">
         <h1 className="title">🎵 MoodSync — Playlist by Mood</h1>
 
-        {/* Quick mood chips */}
+     
         <div className="chips">
           {["happy", "sad", "angry", "relaxed"].map((m) => (
             <button key={m} className="chip" onClick={() => quickSet(m)}>
@@ -192,7 +186,7 @@ export default function Dashboard() {
           ))}
         </div>
 
-        {/* Input and button */}
+    
         <div className="input-row">
           <input
             value={rawInput}
@@ -202,7 +196,7 @@ export default function Dashboard() {
           <button onClick={() => handleRecommend()}>Get Playlist</button>
         </div>
 
-        {/* Language toggle */}
+       
         <div className="input-row">
           <label>
             <input
@@ -222,7 +216,7 @@ export default function Dashboard() {
           </label>
         </div>
 
-        {/* Mood result */}
+      
         {activeMood && (
           <div className="result">
             <div className="mood-row">
