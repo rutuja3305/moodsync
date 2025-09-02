@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import Login from "./pages/login";                // your login page (lowercase file)
+import Login from "./pages/login";                //  login page (lowercase file)
 import Dashboard from "./components/dashboard";   // <- this path
 
 export default function App() {
